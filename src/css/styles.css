@@ -109,6 +109,14 @@ li {
 body {
   font-family: var(--ff-space-mono);
   font-weight: 700;
+  background-color: var(--alice-blue);
+}
+
+.logo {
+  margin-block: 3.75rem 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
