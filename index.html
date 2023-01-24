@@ -26,9 +26,52 @@
   <body>
     <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
     person Total / person Reset -->
-    <div class="logo center">
+    <header class="logo center">
       <img src="/src/assets/images/logo.svg" />
-    </div>
+    </header>
+    <main>
+      <div class="user-input-section">
+        <form action="/src/js/script.js" class="tip-selection">
+          <h1>Bill</h1>
+          <input type="text" required />
+          <p>Select Tip %</p>
+          <input type="radio" id="five" name="tip-percentage" value="five" />
+          <label for="five">5%</label>
+          <input type="radio" id="ten" name="tip-percentage" value="ten" />
+          <label for="ten">10%</label>
+          <br />
+          <input
+            type="radio"
+            id="fifteen"
+            name="tip-percentage"
+            value="fifteen"
+          />
+          <label for="fifteen">15%</label>
+          <input
+            type="radio"
+            id="twenty-five"
+            name="tip-percentage"
+            value="twenty-five"
+          />
+          <label for="twenty-five">25%</label>
+          <br />
+          <input type="radio" id="fifty" name="tip-percentage" value="fifty" />
+          <label for="fifty">50%</label>
+          <input
+            type="radio"
+            id="custom"
+            name="tip-percentage"
+            value="custom"
+          />
+          <label for="custom">Custom</label>
+          <p>Number of People</p>
+          <input type="text" />
+        </form>
+      </div>
+      <div class="user-result-section">
+        <p>Tip Amount</p>
+      </div>
+    </main>
     <footer>
       <div class="attribution">
         Challenge by
