@@ -1,4 +1,25 @@
+:root {
+  // Colors
+  --tropical-blue: #c4e4e8;
+  --milk-white: #ffffff;
+  --ice-blue: #d0ffff;
+  --ash-grey: #a5bbbb;
+  --white-lilac: #f3f8fa;
+  --dark-teal: #044243;
+  --metallic-silver: #b9ccc8;
+  --ceramic-white: #f4ffff;
+  --powder-blue: #9ee8df;
+  --storm-grey: #677979;
+  --dusty-rose: #cc7666;
+  --greeny-blue: #1fbda8;
+  --blueish-grey: #65959b;
+  --alice-blue: #e4fcff;
+
+  // Font Families
+  --ff-space-mono: "Space Mono", monospace;
+}
+
 body {
-  font-family: "Space Mono", monospace;
+  font-family: var(--ff-space-mono);
   font-weight: 700;
 }
