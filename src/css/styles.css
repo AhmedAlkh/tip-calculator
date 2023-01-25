@@ -103,6 +103,7 @@ li {
   --greeny-blue: #1fbda8;
   --blueish-grey: #65959b;
   --alice-blue: #e4fcff;
+  --very-light-grey: #f0f1f1;
   --ff-space-mono: "Space Mono", monospace;
 }
 
@@ -131,15 +132,43 @@ body p {
 
 main {
   background-color: var(--milk-white);
-  padding: 1.5rem;
+  color: var(--dark-teal);
+  padding: 3rem;
+  border-radius: 10px;
 }
 
 .user-input-section {
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  background-color: var(--milk-white);
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .user-input-section h1 {
   font-size: 18px;
+}
+.user-input-section .input-icons i {
+  position: absolute;
+}
+.user-input-section .input-icons {
+  width: 100%;
+}
+.user-input-section .icon {
+  padding: 10px;
+  min-width: 40px;
+  color: var(--storm-grey);
+}
+.user-input-section .input-field {
+  padding: 5px;
+  text-align: right;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--very-light-grey);
+  color: var(--dark-teal);
+}
+.user-input-section .tip-wrapper {
+  margin-bottom: 10px;
 }
 .user-input-section .tip-selection input[type=radio] {
   opacity: 0;
@@ -150,11 +179,12 @@ main {
   display: inline-block;
   background-color: var(--dark-teal);
   color: var(--white-lilac);
-  padding: 5px 30px;
   font-family: sans-serif, Arial;
   font-size: 16px;
   border: none;
   border-radius: 4px;
+  padding: 5px 30px;
+  margin: 6px;
 }
 .user-input-section .tip-selection input[type=radio]:checked + label {
   background-color: var(--greeny-blue);
@@ -166,14 +196,53 @@ main {
 .user-input-section .tip-selection label:hover {
   background-color: var(--powder-blue);
   color: var(--dark-teal);
+  cursor: pointer;
 }
 
 .user-result-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--dark-teal);
   border-radius: 10px;
 }
 .user-result-section p {
   color: var(--white-lilac);
+}
+.user-result-section .tip-amount {
+  margin-block: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.user-result-section .total-amount {
+  margin-block: 15px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.user-result-section .tip-total {
+  color: var(--milk-white);
+  font-weight: bolder;
+}
+.user-result-section .per-person {
+  font-size: 14px;
+  color: var(--metallic-silver);
+}
+.user-result-section .reset-btn {
+  width: 85%;
+  padding: 6px;
+  margin-block: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--greeny-blue);
+  color: var(--dark-teal);
+}
+.user-result-section .reset-btn:hover {
+  background-color: var(--powder-blue);
+  color: var(--dark-teal);
+  cursor: pointer;
 }
 
 footer .attribution {

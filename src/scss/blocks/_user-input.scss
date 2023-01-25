@@ -1,9 +1,42 @@
 .user-input-section {
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  background-color: var(--milk-white);
   border-radius: 10px;
+  margin-bottom: 10px;
 
   h1 {
     font-size: 18px;
+  }
+
+  .input-icons i {
+    position: absolute;
+  }
+
+  .input-icons {
+    width: 100%;
+  }
+
+  .icon {
+    padding: 10px;
+    min-width: 40px;
+    color: var(--storm-grey);
+  }
+
+  .input-field {
+    padding: 5px;
+    text-align: right;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--very-light-grey);
+    color: var(--dark-teal);
+  }
+
+  // Make tip buttons change to 3 coloums, 2 rows on desktop but stay as 2 - 2 on mobile
+  .tip-wrapper {
+    // display: flex;
+    margin-bottom: 10px;
   }
 
   .tip-selection input[type="radio"] {
@@ -16,11 +49,12 @@
     display: inline-block;
     background-color: var(--dark-teal);
     color: var(--white-lilac);
-    padding: 5px 30px;
     font-family: sans-serif, Arial;
     font-size: 16px;
     border: none;
     border-radius: 4px;
+    padding: 5px 30px;
+    margin: 6px;
   }
 
   .tip-selection input[type="radio"]:checked + label {
@@ -35,5 +69,11 @@
   .tip-selection label:hover {
     background-color: var(--powder-blue);
     color: var(--dark-teal);
+    cursor: pointer;
   }
+
+  // .custom-tip {
+  //   background-color: var(--very-light-grey);
+  //   color: var(--dark-teal);
+  // }
 }
