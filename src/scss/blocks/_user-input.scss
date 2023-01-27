@@ -33,10 +33,59 @@
     color: var(--dark-teal);
   }
 
-  // Make tip buttons change to 3 coloums, 2 rows on desktop but stay as 2 - 2 on mobile
+  .input-field:focus {
+    outline: 2px solid var(--greeny-blue);
+  }
+
+  label {
+    text-align: center;
+  }
+
   .tip-wrapper {
-    // display: flex;
     margin-bottom: 10px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+  }
+
+  .grid-section-a {
+    grid-area: a;
+  }
+  .grid-section-b {
+    grid-area: b;
+  }
+
+  .grid-section-c {
+    grid-area: c;
+  }
+
+  .grid-section-d {
+    grid-area: d;
+  }
+
+  .grid-section-e {
+    grid-area: e;
+  }
+
+  .grid-section-f {
+    grid-area: f;
+  }
+
+  @media (min-width: 23.5rem) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "a b c"
+        "d e f";
+    }
   }
 
   .tip-selection input[type="radio"] {
@@ -53,7 +102,7 @@
     font-size: 16px;
     border: none;
     border-radius: 4px;
-    padding: 5px 30px;
+    padding: 5px 20px;
     margin: 6px;
   }
 
@@ -72,8 +121,8 @@
     cursor: pointer;
   }
 
-  // .custom-tip {
-  //   background-color: var(--very-light-grey);
-  //   color: var(--dark-teal);
-  // }
+  .custom-tip {
+    background-color: var(--very-light-grey) !important;
+    color: var(--dark-teal) !important;
+  }
 }

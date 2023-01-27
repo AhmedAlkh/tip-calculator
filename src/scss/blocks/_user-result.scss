@@ -19,8 +19,9 @@
 
   .total-amount {
     margin-block: 15px;
+    padding-inline: 23px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
   }
 
@@ -32,6 +33,12 @@
   .per-person {
     font-size: 14px;
     color: var(--metallic-silver);
+  }
+
+  .cost {
+    color: var(--greeny-blue);
+    font-weight: bolder;
+    font-size: 25px;
   }
 
   .reset-btn {

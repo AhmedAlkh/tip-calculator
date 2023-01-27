@@ -35,7 +35,7 @@
       <img src="/src/assets/images/logo.svg" />
     </header>
     <main class="center">
-      <div class="user-input-section">
+      <div class="user-input-section center">
         <form action="/src/js/script.js" class="tip-selection">
           <h1>Bill</h1>
           <div>
@@ -46,41 +46,49 @@
           </div>
           <div class="tip-wrapper">
             <p>Select Tip %</p>
-            <input type="radio" id="five" name="tip-percentage" value="five" />
-            <label for="five">5%</label>
-            <input type="radio" id="ten" name="tip-percentage" value="ten" />
-            <label for="ten">10%</label>
-            <br />
-            <input
-              type="radio"
-              id="fifteen"
-              name="tip-percentage"
-              value="fifteen"
-            />
-            <label for="fifteen">15%</label>
-            <input
-              type="radio"
-              id="twenty-five"
-              name="tip-percentage"
-              value="twenty-five"
-            />
-            <label for="twenty-five">25%</label>
-            <br />
-            <input
-              type="radio"
-              id="fifty"
-              name="tip-percentage"
-              value="fifty"
-            />
-            <label for="fifty">50%</label>
-            <input
-              type="radio"
-              id="custom"
-              class="custom-tip"
-              name="tip-percentage"
-              value="custom"
-            />
-            <label for="custom">Custom</label>
+            <div class="grid-container">
+              <input
+                type="radio"
+                id="five"
+                name="tip-percentage"
+                value="five"
+              />
+              <label class="grid-section-a" for="five">5%</label>
+              <input type="radio" id="ten" name="tip-percentage" value="ten" />
+              <label class="grid-section-b" for="ten">10%</label>
+              <br />
+              <input
+                type="radio"
+                id="fifteen"
+                name="tip-percentage"
+                value="fifteen"
+              />
+              <label class="grid-section-c" for="fifteen">15%</label>
+              <input
+                type="radio"
+                id="twenty-five"
+                name="tip-percentage"
+                value="twenty-five"
+              />
+              <label class="grid-section-d" for="twenty-five">25%</label>
+              <br />
+              <input
+                type="radio"
+                id="fifty"
+                name="tip-percentage"
+                value="fifty"
+              />
+              <label class="grid-section-e" for="fifty">50%</label>
+              <input
+                type="radio"
+                id="custom"
+                name="tip-percentage"
+                value="custom"
+              />
+              <label class="grid-section-f custom-tip" for="custom"
+                >Custom</label
+              >
+            </div>
           </div>
           <p>Number of People</p>
           <div>
@@ -98,7 +106,7 @@
             <p class="per-person">/ person</p>
           </div>
           <div>
-            <p>$ tip</p>
+            <p class="cost">$0.00</p>
           </div>
         </div>
         <div class="total-amount">
@@ -107,7 +115,7 @@
             <p class="per-person">/ person</p>
           </div>
           <div>
-            <p>$ Total</p>
+            <p class="cost">$0.00</p>
           </div>
         </div>
         <button class="reset-btn">RESET</button>
@@ -120,7 +128,9 @@
           href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX"
           target="_blank"
           >Frontend Mentor</a
-        >. Coded by
+        >.
+        <br />
+        Coded by
         <a href="https://ahmedalkhatib.netlify.app/" target="_blank"
           >Ahmed Alkhatib</a
         >.
