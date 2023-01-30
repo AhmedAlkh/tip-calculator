@@ -36,12 +36,19 @@
     </header>
     <main class="center">
       <div class="user-input-section center">
-        <form action="/src/js/script.js" class="tip-selection">
-          <h1>Bill</h1>
+        <form class="tip-selection">
+          <label class="bill-input" for="bill-input"><h1>Bill</h1></label>
           <div>
             <div class="input-icons">
               <i class="fa-sharp fa-solid fa-dollar-sign icon"></i>
-              <input type="text" class="input-field" placeholder="0" required />
+              <input
+                type="text"
+                class="input-field"
+                id="bill-input"
+                oninput="calculateTip()"
+                placeholder="0"
+                required
+              />
             </div>
           </div>
           <div class="tip-wrapper">
@@ -51,50 +58,80 @@
                 type="radio"
                 id="five"
                 name="tip-percentage"
-                value="five"
+                value="5"
+                onclick="calculateTip()"
+                required
               />
-              <label class="grid-section-a" for="five">5%</label>
-              <input type="radio" id="ten" name="tip-percentage" value="ten" />
-              <label class="grid-section-b" for="ten">10%</label>
-              <br />
+              <label class="grid-section-a tip-option" for="five">5%</label>
+              <input
+                type="radio"
+                id="ten"
+                name="tip-percentage"
+                value="10"
+                onclick="calculateTip()"
+              />
+              <label class="grid-section-b tip-option" for="ten">10%</label>
               <input
                 type="radio"
                 id="fifteen"
                 name="tip-percentage"
-                value="fifteen"
+                value="15"
+                onclick="calculateTip()"
               />
-              <label class="grid-section-c" for="fifteen">15%</label>
+              <label class="grid-section-c tip-option" for="fifteen">15%</label>
               <input
                 type="radio"
                 id="twenty-five"
                 name="tip-percentage"
-                value="twenty-five"
+                value="25"
+                onclick="calculateTip()"
               />
-              <label class="grid-section-d" for="twenty-five">25%</label>
-              <br />
+              <label class="grid-section-d tip-option" for="twenty-five"
+                >25%</label
+              >
               <input
                 type="radio"
                 id="fifty"
                 name="tip-percentage"
-                value="fifty"
+                value="50"
+                onclick="calculateTip()"
               />
-              <label class="grid-section-e" for="fifty">50%</label>
+              <label class="grid-section-e tip-option" for="fifty">50%</label>
               <input
                 type="radio"
-                id="custom"
+                id="customTipPercentageRadio"
                 name="tip-percentage"
                 value="custom"
+                onclick="calculateTip()"
               />
-              <label class="grid-section-f custom-tip" for="custom"
+              <label
+                class="grid-section-f tip-option custom-tip"
+                for="customTipPercentageRadio"
                 >Custom</label
               >
+              <input
+                type="text"
+                id="customTipPercentageInput"
+                style="display: none"
+                oninput="calculateTip()"
+              />
+              <label for="customTipPercentageInput"></label>
             </div>
           </div>
-          <p>Number of People</p>
+          <label class="people-input" for="num-of-people"
+            ><p>Number of People</p></label
+          >
           <div>
             <div class="input-icons">
               <i class="fa-solid fa-user icon"></i>
-              <input type="text" class="input-field" placeholder="0" required />
+              <input
+                type="text"
+                id="num-of-people"
+                oninput="calculateTip()"
+                class="input-field"
+                placeholder="0"
+                required
+              />
             </div>
           </div>
         </form>
@@ -106,7 +143,7 @@
             <p class="per-person">/ person</p>
           </div>
           <div>
-            <p class="cost">$0.00</p>
+            <p class="tip-cost"><span id="tipPerPerson">$0.00</span></p>
           </div>
         </div>
         <div class="total-amount">
@@ -115,7 +152,7 @@
             <p class="per-person">/ person</p>
           </div>
           <div>
-            <p class="cost">$0.00</p>
+            <p class="total-cost"><span id="totalPerPerson">$0.00</span></p>
           </div>
         </div>
         <button class="reset-btn">RESET</button>

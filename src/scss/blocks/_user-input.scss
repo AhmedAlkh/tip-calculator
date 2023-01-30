@@ -9,6 +9,11 @@
     font-size: 18px;
   }
 
+  .bill-input,
+  .people-input {
+    display: flex;
+  }
+
   .input-icons i {
     position: absolute;
   }
@@ -94,7 +99,7 @@
     width: 0;
   }
 
-  .tip-selection label {
+  .tip-selection .tip-option {
     display: inline-block;
     background-color: var(--dark-teal);
     color: var(--white-lilac);

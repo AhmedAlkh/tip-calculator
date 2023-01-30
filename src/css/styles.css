@@ -147,6 +147,10 @@ main {
 .user-input-section h1 {
   font-size: 18px;
 }
+.user-input-section .bill-input,
+.user-input-section .people-input {
+  display: flex;
+}
 .user-input-section .input-icons i {
   position: absolute;
 }
@@ -212,7 +216,7 @@ main {
   position: fixed;
   width: 0;
 }
-.user-input-section .tip-selection label {
+.user-input-section .tip-selection .tip-option {
   display: inline-block;
   background-color: var(--dark-teal);
   color: var(--white-lilac);
@@ -272,7 +276,8 @@ main {
   font-size: 14px;
   color: var(--metallic-silver);
 }
-.user-result-section .cost {
+.user-result-section .tip-cost,
+.user-result-section .total-cost {
   color: var(--greeny-blue);
   font-weight: bolder;
   font-size: 25px;
