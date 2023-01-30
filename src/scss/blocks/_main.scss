@@ -4,3 +4,9 @@ main {
   padding: 3rem;
   border-radius: 30px;
 }
+
+@media (min-width: 48rem) {
+  main {
+    display: flex;
+  }
+}

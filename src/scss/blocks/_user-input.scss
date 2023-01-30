@@ -131,3 +131,26 @@
     color: var(--dark-teal) !important;
   }
 }
+
+@media (min-width: 48rem) {
+  .user-input-section {
+    width: 50%;
+    margin-right: 30px;
+  }
+
+  .input-field {
+    width: 98%;
+  }
+}
+
+@media (min-width: 23.5rem) {
+  .user-input-section {
+    label {
+      width: 90px;
+    }
+
+    .people-input {
+      width: 100%;
+    }
+  }
+}

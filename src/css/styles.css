@@ -137,6 +137,11 @@ main {
   border-radius: 30px;
 }
 
+@media (min-width: 48rem) {
+  main {
+    display: flex;
+  }
+}
 .user-input-section {
   display: flex;
   justify-content: center;
@@ -244,6 +249,23 @@ main {
   color: var(--dark-teal) !important;
 }
 
+@media (min-width: 48rem) {
+  .user-input-section {
+    width: 50%;
+    margin-right: 30px;
+  }
+  .input-field {
+    width: 98%;
+  }
+}
+@media (min-width: 23.5rem) {
+  .user-input-section label {
+    width: 90px;
+  }
+  .user-input-section .people-input {
+    width: 100%;
+  }
+}
 .user-result-section {
   display: flex;
   flex-direction: column;
@@ -259,13 +281,12 @@ main {
   margin-block: 20px;
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 91%;
 }
 .user-result-section .total-amount {
-  margin-block: 15px;
-  padding-inline: 23px;
+  margin-block: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 .user-result-section .tip-total {
@@ -297,12 +318,26 @@ main {
   cursor: pointer;
 }
 
+@media (min-width: 48rem) {
+  .user-result-section {
+    width: 50%;
+  }
+}
 footer .attribution {
   font-size: 11px;
   text-align: center;
 }
 footer .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+@media (min-width: 48rem) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
