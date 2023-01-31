@@ -279,6 +279,9 @@ main {
   }
 }
 @media (min-width: 23.5rem) {
+  .input-field {
+    width: 97%;
+  }
   .user-input-section label {
     width: 90px;
   }
