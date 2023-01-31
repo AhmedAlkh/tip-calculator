@@ -1,4 +1,3 @@
-// GLOBAL VARIABLES
 const billAmountInput = document.querySelector("#bill-input");
 const peopleCountInput = document.querySelector("#num-of-people");
 const customTipPercentage = document.querySelector("#customTipPercentage");
@@ -17,7 +16,6 @@ function calculateTip() {
     'input[name="tip-percentage"]:checked'
   );
   if (customTipPercentageValue && checkedRadio) {
-    // both a custom tip percentage and a preset percentage on the radio buttons are selected
     alert(
       "Please choose either a custom tip percentage or a preset percentage, not both."
     );
@@ -36,10 +34,7 @@ function calculateTip() {
   totalPerPersonSpan.textContent = "$" + totalPerPerson.toFixed(2);
 }
 
-// RESET BUTTON
-const resetButton = document.querySelector(".reset-btn");
-resetButton.addEventListener("click", reset);
-
+// RESET FUNCTION
 function reset() {
   billAmountInput.value = "";
   peopleCountInput.value = "";
@@ -52,10 +47,9 @@ function reset() {
   totalPerPersonSpan.textContent = "$0.00";
 }
 
-// if custom tip percentage is entered, tipPercentage will be equal to that value
-// else if tip percentage button is clicked, tipPercentage will be equal to the value of that button
-// else, no tip is included
+// RESET BUTTON
+const resetButton = document.querySelector(".reset-btn");
+resetButton.addEventListener("click", reset);
 
-// Get the radio button tip percentage that the user selects
-// const tipOption  = document.querySelectorAll(".tip-option");
-// Create a variable to hold the customTipPercentage
+// Listen for changes in the custom tip percentage input field
+customTipPercentage.addEventListener("input", calculateTip);
