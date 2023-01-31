@@ -96,7 +96,7 @@
                 onclick="calculateTip()"
               />
               <label class="grid-section-e tip-option" for="fifty">50%</label>
-              <input
+              <!-- <input
                 type="radio"
                 id="customTipPercentageRadio"
                 name="tip-percentage"
@@ -107,15 +107,13 @@
                 class="grid-section-f tip-option custom-tip"
                 for="customTipPercentageRadio"
                 >Custom</label
-              >
+              > -->
               <input
                 type="text"
-                id="customTipPercentageInput"
-                name="tip-percentage"
-                style="display: none"
-                oninput="calculateTip()"
+                placeholder="Custom"
+                class="custom-tip"
+                id="customTipPercentage"
               />
-              <label for="customTipPercentageInput"></label>
             </div>
           </div>
           <label class="people-input" for="num-of-people"
